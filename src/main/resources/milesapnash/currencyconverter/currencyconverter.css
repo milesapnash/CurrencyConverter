@@ -1,0 +1,34 @@
+.root {
+    -fx-background-color: "white";
+}
+
+.label {
+    -fx-text-fill: "black";
+    -fx-font-size: 18;
+    -fx-font-family: "Agency FB";
+    -fx-alignment: center;
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+}
+
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background;
+}
+
+.button {
+    //
+}
+
+.choice-box {
+    -fx-mark-color: transparent;
+    -fx-focused-mark-color: transparent;
+}
+
+#title {
+    -fx-text-fill: "red";
+    -fx-font-size: 20;
+}

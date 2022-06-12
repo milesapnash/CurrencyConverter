@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="milesapnash.currencyconverter.Controller">
+   <children>
+      <Label id="title" layoutY="14.0" prefHeight="18.0" prefWidth="301.0" text="Currency Converter" />
+      <Label layoutX="48.0" layoutY="76.0" text="From" />
+      <Label layoutX="48.0" layoutY="163.0" text="To" />
+      <Label layoutX="48.0" layoutY="388.0" text="Amount" />
+      <Label fx:id="inputDenominationLabel" layoutX="211.0" layoutY="275.0" text="-" />
+      <Label fx:id="outputDenominationLabel" layoutX="214.0" layoutY="423.0" text="-" />
+      <ChoiceBox fx:id="inputChoiceBox" onAction="#inputChoiceBoxChanged" layoutX="48.0" layoutY="113.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="outputChoiceBox" onAction="#outputChoiceBoxChanged" layoutX="48.0" layoutY="202.0" prefWidth="150.0" />
+      <TextField fx:id="inputTextField" layoutX="48.0" layoutY="271.0" promptText="Input Amount" />
+      <TextField fx:id="outputTextField" editable="false" focusTraversable="false" layoutX="48.0" layoutY="419.0" mouseTransparent="true" promptText="Converted Amount" />
+      <Button id="convertButton" layoutX="99.0" layoutY="336.0" mnemonicParsing="false" onAction="#attemptConversion" prefHeight="26.0" prefWidth="102.0" text="Convert" />
+   </children>
+</AnchorPane>
