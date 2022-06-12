@@ -12,12 +12,13 @@
       <Label layoutX="48.0" layoutY="76.0" text="From" />
       <Label layoutX="48.0" layoutY="163.0" text="To" />
       <Label layoutX="48.0" layoutY="388.0" text="Amount" />
-      <Label fx:id="inputDenominationLabel" layoutX="211.0" layoutY="275.0" text="-" />
-      <Label fx:id="outputDenominationLabel" layoutX="214.0" layoutY="423.0" text="-" />
-      <ChoiceBox fx:id="inputChoiceBox" onAction="#inputChoiceBoxChanged" layoutX="48.0" layoutY="113.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="outputChoiceBox" onAction="#outputChoiceBoxChanged" layoutX="48.0" layoutY="202.0" prefWidth="150.0" />
-      <TextField fx:id="inputTextField" layoutX="48.0" layoutY="271.0" promptText="Input Amount" />
+      <Label fx:id="inputDenominationLabel" layoutX="230.0" layoutY="275.0" text="-" />
+      <Label fx:id="outputDenominationLabel" layoutX="230.0" layoutY="423.0" text="-" />
+      <ChoiceBox fx:id="inputChoiceBox" layoutX="48.0" layoutY="113.0" onAction="#inputChoiceBoxChanged" prefWidth="150.0" />
+      <ChoiceBox fx:id="outputChoiceBox" layoutX="48.0" layoutY="202.0" onAction="#outputChoiceBoxChanged" prefWidth="150.0" />
+      <TextField fx:id="inputTextField" layoutX="48.0" layoutY="271.0" promptText="Amount" />
       <TextField fx:id="outputTextField" editable="false" focusTraversable="false" layoutX="48.0" layoutY="419.0" mouseTransparent="true" promptText="Converted Amount" />
-      <Button id="convertButton" layoutX="99.0" layoutY="336.0" mnemonicParsing="false" onAction="#attemptConversion" prefHeight="26.0" prefWidth="102.0" text="Convert" />
+      <Button layoutX="99.0" layoutY="336.0" mnemonicParsing="false" onAction="#attemptConversion" prefHeight="26.0" prefWidth="102.0" text="Convert" />
+      <Button fx:id="reverseButton" layoutX="219.0" layoutY="159.0" mnemonicParsing="false" onAction="#switchBoxValues" prefHeight="32.0" prefWidth="32.0" />
    </children>
 </AnchorPane>

@@ -2,9 +2,12 @@ package milesapnash.currencyconverter
 
 import javafx.collections.FXCollections
 import javafx.fxml.FXML
+import javafx.scene.control.Button
 import javafx.scene.control.ChoiceBox
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
+import javafx.scene.image.Image
+import javafx.scene.image.ImageView
 import kotlin.math.roundToInt
 
 class Controller {
@@ -33,7 +36,16 @@ class Controller {
     private lateinit var outputChoiceBox: ChoiceBox<String>
 
     @FXML
+    private lateinit var reverseButton: Button
+
+    @FXML
     fun initialize() {
+        val view = ImageView(Image("file:reverseSymbol.png"))
+        view.isPreserveRatio = true
+        view.fitWidth = 32.0
+        view.fitHeight = 32.0
+        reverseButton.graphic = view
+
         inputChoiceBox.items = nationalities
         inputChoiceBox.value = nationalities[0]
         outputChoiceBox.items = nationalities
@@ -45,6 +57,8 @@ class Controller {
         if (valid(input)) {
             outputTextField.text =
                 ((convert(input.toDouble()) * 100.0).roundToInt() / 100.0).toString()
+        } else {
+            // WARNING MESSAGE OR REMOVE CONVERT BUTTON
         }
     }
 
@@ -58,6 +72,12 @@ class Controller {
         currentOutputDenomination =
             nationsToCurrencies[outputChoiceBox.value].toString()
         outputDenominationLabel.text = currentOutputDenomination
+    }
+
+    fun switchBoxValues() {
+        val placeholder = inputChoiceBox.value
+        inputChoiceBox.value = outputChoiceBox.value
+        outputChoiceBox.value = placeholder
     }
 
     private fun convert(

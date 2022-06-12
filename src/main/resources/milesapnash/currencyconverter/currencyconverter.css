@@ -19,16 +19,16 @@
     -fx-background-color: -fx-focus-color, -fx-background;
 }
 
-.button {
-    //
-}
-
 .choice-box {
     -fx-mark-color: transparent;
     -fx-focused-mark-color: transparent;
 }
 
+#reverseButton {
+    -fx-background-color: "transparent"
+}
+
 #title {
-    -fx-text-fill: "red";
+    -fx-text-fill: "gold";
     -fx-font-size: 20;
 }
